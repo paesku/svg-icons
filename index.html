@@ -7,9 +7,10 @@
   </head>
   <style>
   .container {
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin: 1rem 2rem;
+    padding: 1rem;
   }
+
 </style>
   <body>
     <!-- SVG's can be placed inside HTML display:none will hide it -->
@@ -24,18 +25,49 @@
         <path fill="currentColor" d="M30 42.21L15.35 51l3.87-16.64L6.33 23.11l16.99-1.41L30 6l6.68 15.7 16.99 1.41-12.89 11.25L44.65 51 30 42.21z"></path>
       </symbol>
     </svg>
-    <div ng-app="app">
-      <md-toolbar>
-        <h3>Angular Material Icons</h3>
+    <div ng-app="app" ng-controller="AppCtrl as ctrl">
+      <md-toolbar class="md-accent md-whiteframe-z2">
+        <div class="md-toolbar-tools">
+          <h3>Angular Material Icons</h3>
+          <span flex></span>
+          <md-button class="md-icon-button md-accent">
+            <md-icon md-svg-icon="ui:cake" class="icon-lg"></md-icon>
+          </md-button>
+          <md-button class="md-icon-button">
+            <md-icon md-svg-icon="uiplus:nav" class="icon-lg"></md-icon>
+          </md-button>
+          <md-menu>
+            <md-button class="md-icon-button" ng-click="ctrl.openMenu($mdOpenMenu, $event)">
+              <md-icon md-menu-origin md-svg-icon="ui:cake"></md-icon>
+            </md-button>
+            <md-menu-content width="4">
+              <md-menu-item>
+                <md-button>
+                  <md-icon md-svg-icon="ui:cake" style="fill: #fff;" md-menu-align-target></md-icon>
+                  Redial
+                </md-button>
+              </md-menu-item>
+              <md-menu-divider></md-menu-divider>
+              <md-menu-item>
+                <md-button>
+                  <md-icon md-svg-icon="ui:cake" md-menu-align-target></md-icon>
+                  Redial
+                </md-button>
+              </md-menu-item>
+
+            </md-menu-content>
+          </md-menu>
+        </div>
       </md-toolbar>
 
       <md-content layout="row" flex>
-          <md-sidenav md-is-locked-open="true"
-                      class="md-hue-1 md-sidenav-left md-whiteframe-z2">
+          <md-sidenav layout="column"
+                      md-is-locked-open="true"
+                      class="md-background md-hue-3 md-sidenav-left md-whiteframe-z1">
             <md-list>
-              <md-list-item >
+              <md-list-item class="active">
                   <md-button>
-                    <md-icon md-svg-icon="ui:cake" class="icon-lg"></md-icon>
+                    <md-icon md-svg-icon="ui:cake" class="md-accent icon-lg"></md-icon>
                     Menu 1
                   </md-button>
               </md-list-item>
@@ -71,7 +103,8 @@
             </md-list>
           </md-sidenav>
 
-          <md-content class="container" >
+          <md-content layout="column" class="md-hue-1">
+            <md-content class="md-hue-2 container md-whiteframe-z2">
             <h2>Usage of SVG Icons in Angular Material and the classic Way</h2>
             <p class="md-body-1">
               There are several ways to use SVG Icons within a Document. A couple
@@ -85,24 +118,71 @@
             </ul>
             <h3>How to use SVG Ressources</h3>
             <ul>
+              <li><a href="https://material.angularjs.org/latest/demo/icon">Official Angular Material Docs</a></li>
               <li><a href="https://github.com/google/material-design-icons/tree/master/sprites">Material icon sprites</a></li>
               <li><a href="http://tympanus.net/codrops/2015/07/16/styling-svg-use-content-css/">Styling SVG <use> Content with CSS by all famous Sara Soueidan</a></li>
             </ul>
-            <!-- Icons referenced by use xlink are rendered as Shadow DOM elements and are not accessible from the outside -->
-            <svg class="icon-xl icon-colored">
-              <use xlink:href="#icon-build"  />
-            </svg>
-            <!-- Classes within the <symbol> don't react to different states like :hover but can be styled via css-->
-            <svg class="icon-xl icon-colored">
-              <use xlink:href="#icon-category-concept"/>
-            </svg>
-            <svg class="icon-xl icon-colored" >
-              <use xlink:href="app/icons/symbol-icons.svg#icon-hammer"/>
-            </svg>
-            <!-- Icon Size doesnt match with <g> -->
-            <svg class="icon-xl icon-colored">
-              <use xlink:href="app/icons/symbol-icons.svg#icon-hammer2"/>
-            </svg>
+            </md-content>
+            <md-divider></md-divider>
+            <md-content class="md-hue-2 container md-whiteframe-z2">
+              <h3>Examples</h3>
+              <div>
+                <h2>Classic <code>use</code></h2>
+                <!-- Icons referenced by use xlink are rendered as Shadow DOM elements and are not accessible from the outside -->
+                <svg class="icon-xl icon-colored">
+                  <use xlink:href="#icon-build"  />
+                </svg>
+                <!-- Classes within the <symbol> don't react to different states like :hover but can be styled via css-->
+                <svg class="icon-xl icon-colored">
+                  <use xlink:href="#icon-category-concept"/>
+                </svg>
+                <svg class="icon-xl icon-colored" >
+                  <use xlink:href="app/icons/symbol-icons.svg#icon-hammer"/>
+                </svg>
+                <!-- Icon Size doesnt match with <g> -->
+                <svg class="icon-xl icon-colored">
+                  <use xlink:href="app/icons/symbol-icons.svg#icon-hammer2"/>
+                </svg>
+              </div>
+              <div>
+                <h2>Angular <code>md-icon</code> Directive</h2>
+                <p class="md-primary-fg">kjasdkghkshgd</p>
+                <md-icon md-svg-src="symbols:icon-hammer2" class="icon-lg md-primary" ></md-icon>
+                <md-icon md-svg-src="symbols:icon-hammer2" class="icon-lg md-accent" ></md-icon>
+                <md-icon md-svg-src="symbols:icon-hammer2" class="icon-lg md-background md-hue-3" ></md-icon>
+              </div>
+            </md-content>
+            <md-divider></md-divider>
+            <md-content class="md-hue-2 container md-whiteframe-z3">
+              <h3>Playground</h3>
+              <h4 class="">Buttons</h4>
+              <section layout="row" layout-sm="column" layout-align="center center">
+                <md-button class="groupX left">Wine</md-button>
+                <md-button class="groupX middle">Bier</md-button>
+                <md-button class="groupX middle">Whiskey</md-button>
+                <md-button class="groupX right">Tea</md-button>
+              </section>
+              <md-button class="md-icon-button">
+                <md-icon md-svg-icon="symbols:icon-hammer2"></md-icon>
+              </md-button>
+              <md-button class="md-raised md-button">
+                <md-icon md-svg-icon="symbols:icon-hammer2"></md-icon>
+              </md-button>
+              <md-button class="md-raised md-button md-accent">
+                <md-icon md-svg-icon="symbols:icon-hammer2"></md-icon>
+              </md-button>
+              <md-button class="md-button">
+                <md-icon md-svg-icon="symbols:icon-hammer2"></md-icon>
+              </md-button>
+              <md-button class="md-button md-accent">
+                <md-icon md-svg-icon="symbols:icon-hammer2"></md-icon>
+              </md-button>
+            </md-content>
+
+            <md-whiteframe class="md-hue-2 md-whiteframe-3dp" flex-sm="45" flex-gt-sm="35" flex-gt-md="25" layout layout-align="center center">
+              <span>.md-whiteframe-3dp</span>
+            </md-whiteframe>
+
           </md-content>
 
       </md-content>

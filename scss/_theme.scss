@@ -1,0 +1,136 @@
+/*
+  Layout Stuff
+  */
+
+body {
+  height: 100vh
+};
+
+/* Why does this class have no effect here ? */
+.container {
+  background-color: red;
+}
+
+.md-sidenav-left  {
+  min-height: calc(100vH - 75px)
+}
+
+.md-sidenav-left md-list {
+  padding: 0;
+}
+
+.md-sidenav-left md-list-item.active {
+  background: lightgray;
+}
+
+.md-sidenav-left button {
+  margin: 0;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-radius: 0;
+}
+
+md-toolbar-tools {
+  font-size: 20px;
+  letter-spacing: .005em;
+  box-sizing: border-box;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: 64px;
+  max-height: 64px;
+  padding: 0 16px;
+  margin: 0;
+}
+
+/*
+  Icon Stuff
+  */
+
+.icon-sm {
+  width: 60px;
+  height: 60px;
+}
+
+.icon-lg {
+  width: 80px;
+  height: 80px;
+}
+
+.icon-xl {
+  width: 120px;
+  height: 120px;
+}
+
+.icon-colored {
+  color: cornflowerblue;
+}
+
+.icon-colored:hover {
+  color: rebeccapurple;
+  transition: color 300ms;
+}
+
+
+.icon-background {
+  fill: pink;
+}
+
+md-list-item:hover .list-icon {
+  transition: fill 800ms;
+  fill: deepskyblue;
+}
+
+md-list-item:hover .icon-background {
+  transition: fill 600ms;
+  fill: deeppink;
+}
+
+md-list-item:hover .icon-flip {
+  transform: translateX(10);
+}
+
+
+/*
+  Menu Stuff
+  */
+.md-sidenav-left button {
+  width: 100%;
+  text-align: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+
+/*
+  Button Stuff
+*/
+
+.groupX {
+    font-size: 16px;
+    margin: 20px 0;
+    padding: 3px 15px 3px 15px;
+    color: rgb(49, 46, 46);
+    background-color: rgba(224, 224, 224, 0.96);
+    text-transform: none;
+    font-weight: 400;
+    min-width:100px;
+}
+.md-button.left {
+    border-radius: 10px 0 0 10px;
+}
+.md-button.middle {
+    border-radius: 0;
+    border-left: 1px solid rgba(230, 230, 230, 0.96);
+    border-right: 1px solid rgba(230, 230, 230, 0.96);
+}
+.md-button.right {
+    border-radius: 0 10px 10px 0;
+}
+.md-button:not([disabled]):hover {
+    background-color: rgba(193, 193, 193, 0.96);
+    color: rgba(44, 65, 164, 0.96);
+    transition: 0.3s;
+}

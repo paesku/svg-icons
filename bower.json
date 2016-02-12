@@ -1,0 +1,21 @@
+{
+  "name": "material",
+  "homepage": "https://github.com/paesku/svg-icons",
+  "authors": [
+    "paesku <paesku@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular-material-sass-files": "~0.8.3"
+  }
+}

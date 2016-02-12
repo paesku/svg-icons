@@ -2,6 +2,12 @@
 
   angular
     .module('app', ['ngMaterial'])
+    .config(function($mdThemingProvider) {
+      $mdThemingProvider.theme('default')
+        .primaryPalette('pink') // specify primary color, all
+                                // other color intentions will be inherited
+                                // from default
+    })
     .config(function($mdIconProvider) {
       $mdIconProvider
          .icon('ui:cake', 'app/icons/cake.svg', 24)

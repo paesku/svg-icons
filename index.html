@@ -3,62 +3,83 @@
   <head>
     <meta name="description" content="Angular Material: UI Components">
     <link rel="stylesheet" href="https://rawgit.com/angular/bower-material/master/angular-material.min.css"/>
+    <link rel="stylesheet" href="app/styles/app.css">
   </head>
-  <style media="screen">
-  .s16 {
-    width: 16px;
-    height: 16px; }
-  </style>
-  <body ng-app="app">
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <symbol id="icon-build" viewBox="0 0 60 60">
+        <g fill="currentColor">
+          <path d="M4 11h13v8H4zM19 11h24v8H19zM4 31h13v8H4zM19 31h24v8H19zM4 21h25v8H4zM31 21h25v8H31zM4 41h25v8H4zM31 41h25v8H31z"></path>
+        </g>
+      </symbol>
+      <symbol id="icon-category-concept" viewBox="0 0 60 60">
+        <path class="icon-background" d="M60 58c0 1.1-.9 2-2 2H2c-1.1 0-2-.9-2-2V2C0 .9.9 0 2 0h56c1.1 0 2 .9 2 2v56z"></path>
+        <path fill="currentColor" d="M30 42.21L15.35 51l3.87-16.64L6.33 23.11l16.99-1.41L30 6l6.68 15.7 16.99 1.41-12.89 11.25L44.65 51 30 42.21z"></path>
+      </symbol>
+    </svg>
+    <div ng-app="app">
+      <md-toolbar>
+        <h3>Angular Material Starter</h3>
+      </md-toolbar>
 
-    <md-toolbar>
-      <h3>Angular Material Starter</h3>
-    </md-toolbar>
+      <div layout="row" flex>
+          <md-sidenav md-is-locked-open="true"
+                      class="md-hue-1 md-sidenav-left md-whiteframe-z2">
+            <md-list>
+              <md-list-item >
+                  <md-button>
+                    <md-icon md-svg-icon="ui:cake"></md-icon>
+                    Lia Luogo
+                  </md-button>
+              </md-list-item>
 
-    <div class="container" layout="row" flex>
-        <md-sidenav md-is-locked-open="true" class="md-whiteframe-z2">
-          <md-list>
-            <md-list-item >
-                <md-button>
-                  <md-icon md-svg-icon="ui:cake"></md-icon>
-                  Lia Luogo
-                </md-button>
-            </md-list-item>
+              <md-list-item >
+                  <md-button>
+                    <md-icon md-svg-src="uiplus:icon-trust-partners" class="avatar"></md-icon>
+                        Lawrence Ray
+                  </md-button>
+              </md-list-item>
 
-            <md-list-item >
-                <md-button>
-                  <md-icon md-svg-src="uiplus:icon-trust-partners" class="avatar"></md-icon>
-                  Lawrence Ray
-                </md-button>
-            </md-list-item>
+              <md-list-item >
+                  <md-button>
+                    <md-icon md-svg-src="uiplus:icon-arrow-upload" class="s16"></md-icon>
+                    Lawrence Ray
+                  </md-button>
+              </md-list-item>
 
-            <md-list-item >
-                <md-button>
-                  <md-icon md-svg-src="uiplus:icon-arrow-upload" class="s16"></md-icon>
-                  Lawrence Ray
-                </md-button>
-            </md-list-item>
+              <md-list-item >
+                  <md-button>
+                    <md-icon md-svg-src="device:signal_cellular_0_bar" style="fill: red;" class="avatar"></md-icon>
+                    Lawrence Ray
+                  </md-button>
+              </md-list-item>
 
-            <md-list-item >
-                <md-button>
-                  <md-icon md-svg-src="device:signal_cellular_0_bar" style="fill: red;" class="avatar"></md-icon>
-                  Lawrence Ray
-                </md-button>
-            </md-list-item>
+            </md-list>
+          </md-sidenav>
 
-          </md-list>
-        </md-sidenav>
-        <md-content flex id="content" class="lightgreen" flex>
-          <md-icon md-svg-icon="https://rawgit.com/angular/material-start/es5-tutorial/app/assets/svg/avatar-1.svg" class="avatar"></md-icon>
-          <h2>Lia Luogo</h2>
-          <p>
-            I love cheese, especially airedale queso. Cheese and biscuits halloumi cauliflower cheese cottage cheese
-            swiss boursin fondue caerphilly. Cow port-salut camembert de normandie macaroni cheese feta who moved my
-            cheese babybel boursin. Red leicester roquefort boursin squirty cheese jarlsberg blue castello caerphilly
-            chalk and cheese. Lancashire.
-          </p>
-        </md-content>
+          <md-content class="container" >
+            <h2>Lia Luogo</h2>
+            <p class="md-body-1">
+              I love cheese, especially airedale queso. Cheese and biscuits halloumi cauliflower cheese cottage cheese
+              swiss boursin fondue caerphilly. Cow port-salut camembert de normandie macaroni cheese feta who moved my
+              cheese babybel boursin. Red leicester roquefort boursin squirty cheese jarlsberg blue castello caerphilly
+              chalk and cheese. Lancashire.
+            </p>
+            <svg class="icon">
+              <use xlink:href="#icon-build" class="icon-colored"/>
+            </svg>
+            <svg class="icon">
+              <use xlink:href="#icon-category-concept" class="icon-colored"/>
+            </svg>
+            <svg class="icon">
+              <use xlink:href="app/icons/symbol-icons.svg#icon-hammer" class="icon-colored"/>
+            </svg>
+          </md-content>
+
+      </div>
     </div>
+
+
 
     <!-- Angular Material requires Angular.js Libraries -->
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
@@ -69,6 +90,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
     <!-- App -->
     <script src="app/app.js"></script>
+
 
   </body>
 </html>

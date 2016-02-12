@@ -1,0 +1,31 @@
+body {
+  height: 100vh
+};
+
+.s16 {
+  width: 16px;
+  height: 16px;
+}
+
+.container {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.icon {
+  width: 80px;
+  height: 80px;
+}
+
+.icon-colored {
+  color: cornflowerblue;
+}
+
+.icon-colored:hover {
+  color: rebeccapurple;
+  transition: color 700ms;
+}
+
+
+.icon-background {
+  fill: pink;
+}

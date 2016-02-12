@@ -1,9 +1,7 @@
 <svg>
-  <defs>
-    <g id="signal_cellular_0_bar"><path fill-opacity=".3" d="M2 22h20V2z"/></g>
-    <g id="signal_cellular_1_bar"><path fill-opacity=".3" d="M2 22h20V2z"/><path d="M12 12L2 22h10z"/></g>
-    <g id="signal_cellular_2_bar"><path fill-opacity=".3" d="M2 22h20V2z"/><path d="M14 10L2 22h12z"/></g>
-    <g id="signal_cellular_3_bar"><path fill-opacity=".3" d="M2 22h20V2z"/><path d="M17 7L2 22h15z"/></g>
-    <g id="signal_cellular_4_bar"><path d="M2 22h20V2z"/></g>
-  </defs>
+  <g id="signal_cellular_0_bar"><path fill-opacity=".3" d="M2 22h20V2z"/></g>
+  <g id="signal_cellular_1_bar"><path fill-opacity=".3" d="M2 22h20V2z"/><path d="M12 12L2 22h10z"/></g>
+  <g id="signal_cellular_2_bar"><path fill-opacity=".3" d="M2 22h20V2z"/><path d="M14 10L2 22h12z"/></g>
+  <g id="signal_cellular_3_bar"><path fill-opacity=".3" d="M2 22h20V2z"/><path d="M17 7L2 22h15z"/></g>
+  <g id="signal_cellular_4_bar"><path d="M2 22h20V2z"/></g>
 </svg>

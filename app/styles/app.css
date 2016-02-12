@@ -1,19 +1,33 @@
+/*
+  Layout Stuff
+  */
+
 body {
   height: 100vh
 };
 
-.s16 {
-  width: 16px;
-  height: 16px;
+.container {
+  background-color: red;
 }
 
-.container {
-  margin-left: 1rem;
-  margin-right: 1rem;
+
+/*
+  Icon Stuff
+  */
+
+.icon-sm {
+  width: 60px;
+  height: 60px;
 }
-.icon {
+
+.icon-lg {
   width: 80px;
   height: 80px;
+}
+
+.icon-xl {
+  width: 120px;
+  height: 120px;
 }
 
 .icon-colored {
@@ -22,10 +36,35 @@ body {
 
 .icon-colored:hover {
   color: rebeccapurple;
-  transition: color 700ms;
+  transition: color 300ms;
 }
 
 
 .icon-background {
   fill: pink;
+}
+
+md-list-item:hover .list-icon {
+  transition: fill 800ms;
+  fill: deepskyblue;
+}
+
+md-list-item:hover .icon-background {
+  transition: fill 600ms;
+  fill: deeppink;
+}
+
+md-list-item:hover .icon-flip {
+  transform: translateX(10);
+}
+
+
+/*
+  Menu Stuff
+  */
+.md-sidenav-left button {
+  width: 100%;
+  text-align: left;
+  margin-left: 0;
+  margin-right: 0;
 }

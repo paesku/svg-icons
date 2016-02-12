@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" >
   <head>
-    <meta name="description" content="Angular Material: UI Components">
+    <meta name="description" content="Angular Material: SVG Icons">
     <link rel="stylesheet" href="https://rawgit.com/angular/bower-material/master/angular-material.min.css"/>
     <link rel="stylesheet" href="app/styles/app.css">
   </head>
+  <style>
+  .container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+</style>
   <body>
+    <!-- SVG's can be placed inside HTML display:none will hide it -->
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
       <symbol id="icon-build" viewBox="0 0 60 60">
         <g fill="currentColor">
@@ -19,38 +26,45 @@
     </svg>
     <div ng-app="app">
       <md-toolbar>
-        <h3>Angular Material Starter</h3>
+        <h3>Angular Material Icons</h3>
       </md-toolbar>
 
-      <div layout="row" flex>
+      <md-content layout="row" flex>
           <md-sidenav md-is-locked-open="true"
                       class="md-hue-1 md-sidenav-left md-whiteframe-z2">
             <md-list>
               <md-list-item >
                   <md-button>
-                    <md-icon md-svg-icon="ui:cake"></md-icon>
-                    Lia Luogo
+                    <md-icon md-svg-icon="ui:cake" class="icon-lg"></md-icon>
+                    Menu 1
                   </md-button>
               </md-list-item>
 
               <md-list-item >
                   <md-button>
-                    <md-icon md-svg-src="uiplus:icon-trust-partners" class="avatar"></md-icon>
-                        Lawrence Ray
+                    <md-icon md-svg-src="uiplus:icon-trust-partners" class="icon-lg"></md-icon>
+                    Menu 2
                   </md-button>
               </md-list-item>
 
               <md-list-item >
                   <md-button>
-                    <md-icon md-svg-src="uiplus:icon-arrow-upload" class="s16"></md-icon>
-                    Lawrence Ray
+                    <md-icon md-svg-src="symbols:icon-category-concept2" class="icon-lg"></md-icon>
+                    Menu 3
                   </md-button>
               </md-list-item>
 
               <md-list-item >
                   <md-button>
-                    <md-icon md-svg-src="device:signal_cellular_0_bar" style="fill: red;" class="avatar"></md-icon>
-                    Lawrence Ray
+                    <md-icon md-svg-src="device:signal_cellular_4_bar" class="icon-lg"></md-icon>
+                    Menu 4
+                  </md-button>
+              </md-list-item>
+
+              <md-list-item >
+                  <md-button>
+                    <md-icon md-svg-src="symbols:icon-hammer2" class="icon-lg" style="color: blueviolet;"></md-icon>
+                    Menu 5
                   </md-button>
               </md-list-item>
 
@@ -58,25 +72,40 @@
           </md-sidenav>
 
           <md-content class="container" >
-            <h2>Lia Luogo</h2>
+            <h2>Usage of SVG Icons in Angular Material and the classic Way</h2>
             <p class="md-body-1">
-              I love cheese, especially airedale queso. Cheese and biscuits halloumi cauliflower cheese cottage cheese
-              swiss boursin fondue caerphilly. Cow port-salut camembert de normandie macaroni cheese feta who moved my
-              cheese babybel boursin. Red leicester roquefort boursin squirty cheese jarlsberg blue castello caerphilly
-              chalk and cheese. Lancashire.
+              There are several ways to use SVG Icons within a Document. A couple
+              of them are shown here, specially the Angular Material component.
+              Have a look at the comments within the files. ;-)
             </p>
-            <svg class="icon">
-              <use xlink:href="#icon-build" class="icon-colored"/>
+            <h3>Icon Ressources</h3>
+            <ul>
+              <li><a href="https://design.google.com/icons/">Google Material Design Icons</a></li>
+              <li><a href="https://materialdesignicons.com/">Community Material Design Icons</a></li>
+            </ul>
+            <h3>How to use SVG Ressources</h3>
+            <ul>
+              <li><a href="https://github.com/google/material-design-icons/tree/master/sprites">Material icon sprites</a></li>
+              <li><a href="http://tympanus.net/codrops/2015/07/16/styling-svg-use-content-css/">Styling SVG <use> Content with CSS by all famous Sara Soueidan</a></li>
+            </ul>
+            <!-- Icons referenced by use xlink are rendered as Shadow DOM elements and are not accessible from the outside -->
+            <svg class="icon-xl icon-colored">
+              <use xlink:href="#icon-build"  />
             </svg>
-            <svg class="icon">
-              <use xlink:href="#icon-category-concept" class="icon-colored"/>
+            <!-- Classes within the <symbol> don't react to different states like :hover but can be styled via css-->
+            <svg class="icon-xl icon-colored">
+              <use xlink:href="#icon-category-concept"/>
             </svg>
-            <svg class="icon">
-              <use xlink:href="app/icons/symbol-icons.svg#icon-hammer" class="icon-colored"/>
+            <svg class="icon-xl icon-colored" >
+              <use xlink:href="app/icons/symbol-icons.svg#icon-hammer"/>
+            </svg>
+            <!-- Icon Size doesnt match with <g> -->
+            <svg class="icon-xl icon-colored">
+              <use xlink:href="app/icons/symbol-icons.svg#icon-hammer2"/>
             </svg>
           </md-content>
 
-      </div>
+      </md-content>
     </div>
 
 

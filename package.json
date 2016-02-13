@@ -1,7 +1,7 @@
 {
   "name": "material",
   "version": "1.0.0",
-  "description": "",
+  "description": "no description",
   "scripts": {
     "sass": "node-sass scss/app.scss app/styles/app.css -w"
   },
@@ -14,5 +14,8 @@
   "bugs": {
     "url": "https://github.com/paesku/svg-icons/issues"
   },
-  "homepage": "https://github.com/paesku/svg-icons#readme"
+  "homepage": "https://github.com/paesku/svg-icons#readme",
+  "devDependencies": {
+    "node-sass": "^3.4.2"
+  }
 }

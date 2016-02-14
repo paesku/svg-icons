@@ -65,41 +65,41 @@
                     md-is-locked-open="true"
                     class="md-background md-hue-3 md-sidenav-left md-whiteframe-z1">
           <md-list>
-            <md-list-item class="active">
-                <md-button>
-                  <md-icon md-svg-icon="ui:cake"
-                           class="md-accent icon-lg">
-                  </md-icon>
-                  Menu 1
-                </md-button>
+            <md-list-item ng-style="ctrl.activeItem">
+              <md-button>
+                <md-icon md-svg-icon="ui:cake"
+                         class="md-accent icon-lg">
+                </md-icon>
+                Menu 1
+              </md-button>
+            </md-list-item>
+
+            <md-list-item>
+              <md-button class="md-accent" ng-class="ctrl.active && 'md-hue-2'">
+                <md-icon md-svg-src="uiplus:icon-trust-partners"
+                         class="icon-lg"></md-icon>
+                Menu 2
+              </md-button>
+            </md-list-item>
+            <md-list-item>
+              <md-button class="md-primary" ng-class="ctrl.active && 'md-hue-1'">
+                <md-icon md-svg-src="symbols:icon-category-concept2" class="icon-lg"></md-icon>
+                Menu 3
+              </md-button>
             </md-list-item>
 
             <md-list-item >
-                <md-button>
-                  <md-icon md-svg-src="uiplus:icon-trust-partners" class="icon-lg"></md-icon>
-                  Menu 2
-                </md-button>
+              <md-button>
+                <md-icon md-svg-src="device:signal_cellular_4_bar" class="icon-lg"></md-icon>
+                Menu 4
+              </md-button>
             </md-list-item>
 
             <md-list-item >
-                <md-button>
-                  <md-icon md-svg-src="symbols:icon-category-concept2" class="icon-lg"></md-icon>
-                  Menu 3
-                </md-button>
-            </md-list-item>
-
-            <md-list-item >
-                <md-button>
-                  <md-icon md-svg-src="device:signal_cellular_4_bar" class="icon-lg"></md-icon>
-                  Menu 4
-                </md-button>
-            </md-list-item>
-
-            <md-list-item >
-                <md-button>
-                  <md-icon md-svg-src="symbols:icon-hammer2" class="icon-lg" style="color: blueviolet;"></md-icon>
-                  Menu 5
-                </md-button>
+              <md-button>
+                <md-icon md-svg-src="symbols:icon-hammer2" class="icon-lg" style="color: blueviolet;"></md-icon>
+                Menu 5
+              </md-button>
             </md-list-item>
 
           </md-list>
@@ -175,7 +175,11 @@
             <p class="md-default-theme md-fg md-hue-2">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum maxime iste, facere aperiam vel neque nam ab aliquid repellendus adipisci natus odit soluta odio, nulla nostrum quo sit iure repudiandae!
             </p>
-            <p class="md-primary-theme md-fg md-hue-2">
+            <h4>Fonts</h4>
+            <p class="md-body-2">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum maxime iste, facere aperiam vel neque nam ab aliquid repellendus adipisci natus odit soluta odio, nulla nostrum quo sit iure repudiandae!
+            </p>
+            <p class="md-body-2 md-caption">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum maxime iste, facere aperiam vel neque nam ab aliquid repellendus adipisci natus odit soluta odio, nulla nostrum quo sit iure repudiandae!
             </p>
             <h4 class="">Buttons</h4>

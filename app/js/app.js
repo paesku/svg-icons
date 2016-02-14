@@ -1,11 +1,12 @@
 (function(root, angular, undefined) {
 
   angular
-    .module('app', ['ngMaterial'])
+    .module('app', [
+      'ngMaterial',
+      'md-colors'
+    ])
     .controller('AppCtrl', function DemoCtrl($mdDialog) {
-      var originatorEv;
       this.openMenu = function($mdOpenMenu, ev) {
-        originatorEv = ev;
         $mdOpenMenu(ev);
       };
     })

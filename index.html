@@ -2,7 +2,7 @@
 <html lang="en" >
   <head>
     <meta name="description" content="Angular Material: SVG Icons">
-    <!-- <link rel="stylesheet" href="https://rawgit.com/angular/bower-material/master/angular-material.min.css"/> -->
+    <link rel="stylesheet" href="https://rawgit.com/angular/bower-material/master/angular-material.min.css"/>
     <link rel="stylesheet" href="app/styles/app.css">
   </head>
   <style>
@@ -30,26 +30,26 @@
         <div class="md-toolbar-tools">
           <h3>Angular Material Icons</h3>
           <span flex></span>
-          <md-button class="md-icon-button md-accent">
-            <md-icon md-svg-icon="ui:cake" class="icon-lg"></md-icon>
+          <md-button class="md-icon-button md-primary" aria-label="some label">
+            <md-icon md-svg-icon="ui:cake"></md-icon>
           </md-button>
-          <md-button class="md-icon-button">
+          <md-button class="md-icon-button" aria-label="some label">
             <md-icon md-svg-icon="uiplus:nav" class="icon-lg"></md-icon>
           </md-button>
           <md-menu>
-            <md-button class="md-icon-button" ng-click="ctrl.openMenu($mdOpenMenu, $event)">
+            <md-button class="md-icon-button" ng-click="ctrl.openMenu($mdOpenMenu, $event)" aria-label="some label">
               <md-icon md-menu-origin md-svg-icon="ui:cake"></md-icon>
             </md-button>
             <md-menu-content width="4">
               <md-menu-item>
-                <md-button>
+                <md-button aria-label="some label">
                   <md-icon md-svg-icon="ui:cake" style="fill: #fff;" md-menu-align-target></md-icon>
                   Redial
                 </md-button>
               </md-menu-item>
               <md-menu-divider></md-menu-divider>
               <md-menu-item>
-                <md-button>
+                <md-button aria-label="some label">
                   <md-icon md-svg-icon="ui:cake" md-menu-align-target></md-icon>
                   Redial
                 </md-button>
@@ -61,144 +61,174 @@
       </md-toolbar>
 
       <md-content layout="row" flex>
-          <md-sidenav layout="column"
-                      md-is-locked-open="true"
-                      class="md-background md-hue-3 md-sidenav-left md-whiteframe-z1">
-            <md-list>
-              <md-list-item class="active">
-                  <md-button>
-                    <md-icon md-svg-icon="ui:cake" class="md-accent icon-lg"></md-icon>
-                    Menu 1
-                  </md-button>
-              </md-list-item>
+        <md-sidenav layout="column"
+                    md-is-locked-open="true"
+                    class="md-background md-hue-3 md-sidenav-left md-whiteframe-z1">
+          <md-list>
+            <md-list-item class="active">
+                <md-button>
+                  <md-icon md-svg-icon="ui:cake"
+                           class="md-accent icon-lg">
+                  </md-icon>
+                  Menu 1
+                </md-button>
+            </md-list-item>
 
-              <md-list-item >
-                  <md-button>
-                    <md-icon md-svg-src="uiplus:icon-trust-partners" class="icon-lg"></md-icon>
-                    Menu 2
-                  </md-button>
-              </md-list-item>
+            <md-list-item >
+                <md-button>
+                  <md-icon md-svg-src="uiplus:icon-trust-partners" class="icon-lg"></md-icon>
+                  Menu 2
+                </md-button>
+            </md-list-item>
 
-              <md-list-item >
-                  <md-button>
-                    <md-icon md-svg-src="symbols:icon-category-concept2" class="icon-lg"></md-icon>
-                    Menu 3
-                  </md-button>
-              </md-list-item>
+            <md-list-item >
+                <md-button>
+                  <md-icon md-svg-src="symbols:icon-category-concept2" class="icon-lg"></md-icon>
+                  Menu 3
+                </md-button>
+            </md-list-item>
 
-              <md-list-item >
-                  <md-button>
-                    <md-icon md-svg-src="device:signal_cellular_4_bar" class="icon-lg"></md-icon>
-                    Menu 4
-                  </md-button>
-              </md-list-item>
+            <md-list-item >
+                <md-button>
+                  <md-icon md-svg-src="device:signal_cellular_4_bar" class="icon-lg"></md-icon>
+                  Menu 4
+                </md-button>
+            </md-list-item>
 
-              <md-list-item >
-                  <md-button>
-                    <md-icon md-svg-src="symbols:icon-hammer2" class="icon-lg" style="color: blueviolet;"></md-icon>
-                    Menu 5
-                  </md-button>
-              </md-list-item>
+            <md-list-item >
+                <md-button>
+                  <md-icon md-svg-src="symbols:icon-hammer2" class="icon-lg" style="color: blueviolet;"></md-icon>
+                  Menu 5
+                </md-button>
+            </md-list-item>
 
-            </md-list>
-          </md-sidenav>
+          </md-list>
+        </md-sidenav>
 
-          <md-content layout="column" class="md-hue-1">
-            <md-content class="md-hue-2 container md-whiteframe-z2">
-            <h2>Usage of SVG Icons in Angular Material and the classic Way</h2>
-            <p class="md-body-1">
-              There are several ways to use SVG Icons within a Document. A couple
-              of them are shown here, specially the Angular Material component.
-              Have a look at the comments within the files. ;-)
-            </p>
-            <h3>Icon Ressources</h3>
-            <ul>
-              <li><a href="https://design.google.com/icons/">Google Material Design Icons</a></li>
-              <li><a href="https://materialdesignicons.com/">Community Material Design Icons</a></li>
-            </ul>
-            <h3>How to use SVG Ressources</h3>
-            <ul>
-              <li><a href="https://material.angularjs.org/latest/demo/icon">Official Angular Material Docs</a></li>
-              <li><a href="https://github.com/google/material-design-icons/tree/master/sprites">Material icon sprites</a></li>
-              <li><a href="http://tympanus.net/codrops/2015/07/16/styling-svg-use-content-css/">Styling SVG <use> Content with CSS by all famous Sara Soueidan</a></li>
-            </ul>
-            </md-content>
-            <md-divider></md-divider>
-            <md-content class="md-hue-2 container md-whiteframe-z2">
-              <h3>Examples</h3>
-              <div>
-                <h2>Classic <code>use</code></h2>
-                <!-- Icons referenced by use xlink are rendered as Shadow DOM elements and are not accessible from the outside -->
-                <svg class="icon-xl icon-colored">
-                  <use xlink:href="#icon-build"  />
-                </svg>
-                <!-- Classes within the <symbol> don't react to different states like :hover but can be styled via css-->
-                <svg class="icon-xl icon-colored">
-                  <use xlink:href="#icon-category-concept"/>
-                </svg>
-                <svg class="icon-xl icon-colored" >
-                  <use xlink:href="app/icons/symbol-icons.svg#icon-hammer"/>
-                </svg>
-                <!-- Icon Size doesnt match with <g> -->
-                <svg class="icon-xl icon-colored">
-                  <use xlink:href="app/icons/symbol-icons.svg#icon-hammer2"/>
-                </svg>
-              </div>
-              <div>
-                <h2>Angular <code>md-icon</code> Directive</h2>
-                <p class="md-primary-fg">kjasdkghkshgd</p>
-                <md-icon md-svg-src="symbols:icon-hammer2" class="icon-lg md-primary" ></md-icon>
-                <md-icon md-svg-src="symbols:icon-hammer2" class="icon-lg md-accent" ></md-icon>
-                <md-icon md-svg-src="symbols:icon-hammer2" class="icon-lg md-background md-hue-3" ></md-icon>
-              </div>
-            </md-content>
-            <md-divider></md-divider>
-            <md-content class="md-hue-2 container md-whiteframe-z3">
-              <h3>Playground</h3>
-              <h4 class="">Buttons</h4>
-              <section layout="row" layout-sm="column" layout-align="center center">
-                <md-button class="groupX left">Wine</md-button>
-                <md-button class="groupX middle">Bier</md-button>
-                <md-button class="groupX middle">Whiskey</md-button>
-                <md-button class="groupX right">Tea</md-button>
-              </section>
-              <md-button class="md-icon-button">
-                <md-icon md-svg-icon="symbols:icon-hammer2"></md-icon>
-              </md-button>
-              <md-button class="md-raised md-button">
-                <md-icon md-svg-icon="symbols:icon-hammer2"></md-icon>
-              </md-button>
-              <md-button class="md-raised md-button md-accent">
-                <md-icon md-svg-icon="symbols:icon-hammer2"></md-icon>
-              </md-button>
-              <md-button class="md-button">
-                <md-icon md-svg-icon="symbols:icon-hammer2"></md-icon>
-              </md-button>
-              <md-button class="md-button md-accent">
-                <md-icon md-svg-icon="symbols:icon-hammer2"></md-icon>
-              </md-button>
-            </md-content>
-
-            <md-whiteframe class="md-hue-2 md-whiteframe-3dp" flex-sm="45" flex-gt-sm="35" flex-gt-md="25" layout layout-align="center center">
-              <span>.md-whiteframe-3dp</span>
-            </md-whiteframe>
-
+        <md-content layout="column" class="md-hue-1">
+          <md-content class="md-hue-2 container md-whiteframe-z2">
+          <h2>Usage of SVG Icons in Angular Material and the classic Way</h2>
+          <p class="md-body-1">
+            There are several ways to use SVG Icons within a Document. A couple
+            of them are shown here, specially the Angular Material component.
+            Have a look at the comments within the files. ;-)
+          </p>
+          <h3>Icon Ressources</h3>
+          <ul>
+            <li><a href="https://design.google.com/icons/">Google Material Design Icons</a></li>
+            <li><a href="https://materialdesignicons.com/">Community Material Design Icons</a></li>
+          </ul>
+          <h3>Angular Icon Directive under the Hood</h3>
+          <p>The Angular Icon directive Supports:</p>
+          <ul>
+            <li>embedded SVGs</li>
+            <li>font-icons</li>
+            <li>external SVGs</li>
+          </ul>
+          <p>Have a look whats going on unter the hood: <a href="https://github.com/angular/material/blob/v1.0.5/src/components/icon/js/iconDirective.js">Icon Directive</a></p>
+          <h3>How to use SVG Ressources</h3>
+          <ul>
+            <li><a href="https://material.angularjs.org/latest/demo/icon">Official Angular Material Docs</a></li>
+            <li><a href="https://github.com/google/material-design-icons/tree/master/sprites">Material icon sprites</a></li>
+            <li><a href="http://tympanus.net/codrops/2015/07/16/styling-svg-use-content-css/">Styling SVG <use> Content with CSS by all famous Sara Soueidan</a></li>
+          </ul>
           </md-content>
+          <md-divider></md-divider>
+          <md-content class="md-hue-2 container md-whiteframe-z2">
+            <h3>Examples</h3>
+            <div>
+              <h2>Classic <code>use</code></h2>
+              <!-- Icons referenced by use xlink are rendered as Shadow DOM elements and are not accessible from the outside -->
+              <svg class="icon-xl icon-colored">
+                <use xlink:href="#icon-build"  />
+              </svg>
+              <!-- Classes within the <symbol> don't react to different states like :hover but can be styled via css-->
+              <svg class="icon-xl icon-colored">
+                <use xlink:href="#icon-category-concept"/>
+              </svg>
+              <svg class="icon-xl icon-colored" >
+                <use xlink:href="app/icons/symbol-icons.svg#icon-hammer"/>
+              </svg>
+              <!-- Icon Size doesnt match with <g> -->
+              <svg class="icon-xl icon-colored">
+                <use xlink:href="app/icons/symbol-icons.svg#icon-hammer2"/>
+              </svg>
+            </div>
+            <div>
+              <h2>Angular <code>md-icon</code> Directive</h2>
+              <p class="md-primary-fg">kjasdkghkshgd</p>
+              <md-icon md-svg-src="symbols:icon-hammer2" class="icon-lg md-primary" ></md-icon>
+              <md-icon md-svg-src="symbols:icon-hammer2" class="icon-lg md-accent" ></md-icon>
+              <md-icon md-svg-src="symbols:icon-hammer2" class="icon-lg md-background md-hue-3" ></md-icon>
+            </div>
+          </md-content>
+          <md-divider></md-divider>
+          <md-content class="md-hue-2 container md-whiteframe-z3">
+            <h3>Playground</h3>
+            <h4>Colors</h4>
+            <p class="md-default-theme md-fg md-hue-3">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum maxime iste, facere aperiam vel neque nam ab aliquid repellendus adipisci natus odit soluta odio, nulla nostrum quo sit iure repudiandae!
+            </p>
+            <p class="md-default-theme md-fg md-hue-1">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum maxime iste, facere aperiam vel neque nam ab aliquid repellendus adipisci natus odit soluta odio, nulla nostrum quo sit iure repudiandae!
+            </p>
+            <p class="md-default-theme md-fg md-hue-2">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum maxime iste, facere aperiam vel neque nam ab aliquid repellendus adipisci natus odit soluta odio, nulla nostrum quo sit iure repudiandae!
+            </p>
+            <p class="md-primary-theme md-fg md-hue-2">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum maxime iste, facere aperiam vel neque nam ab aliquid repellendus adipisci natus odit soluta odio, nulla nostrum quo sit iure repudiandae!
+            </p>
+            <h4 class="">Buttons</h4>
+            <section layout="row" layout-sm="column" layout-align="center center">
+              <md-button class="groupX left">Wine</md-button>
+              <md-button class="groupX middle">Bier</md-button>
+              <md-button class="groupX middle">Whiskey</md-button>
+              <md-button class="groupX right">Tea</md-button>
+            </section>
+            <md-button class="md-icon-button"  aria-label="some label">
+              <md-icon md-svg-icon="symbols:icon-hammer2"></md-icon>
+            </md-button>
+            <md-button class="md-raised md-button"  aria-label="some label">
+              <md-icon md-svg-icon="symbols:icon-hammer2"></md-icon>
+            </md-button>
+            <md-button class="md-raised md-button md-accent" aria-label="some label">
+              <md-icon md-svg-icon="symbols:icon-hammer2"></md-icon>
+            </md-button>
+            <md-button class="md-button"  aria-label="some label">
+              <md-icon md-svg-icon="symbols:icon-hammer2"></md-icon>
+            </md-button>
+            <md-button class="md-button md-accent"  aria-label="some label">
+              <md-icon md-svg-icon="symbols:icon-hammer2"></md-icon>
+            </md-button>
+          </md-content>
+
+          <md-whiteframe class="md-hue-2 md-whiteframe-3dp" flex-sm="45" flex-gt-sm="35" flex-gt-md="25" layout layout-align="center center">
+            <span>.md-whiteframe-3dp</span>
+          </md-whiteframe>
+
+        </md-content>
 
       </md-content>
     </div>
 
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script> -->
 
+    <script src="/node_modules/angular/angular.js"></script>
+    <script src="/node_modules/angular-aria/angular-aria.js"></script>
+    <script src="/node_modules/angular-animate/angular-animate.js"></script>
+    <script src="/node_modules/angular-material/angular-material.js"></script>
 
-    <!-- Angular Material requires Angular.js Libraries -->
-    <script src="/bower_components/angular/angular.js"></script>
+    <!-- Using Bower doesnt create styles!-->
+    <!-- <script src="/bower_components/angular/angular.js"></script>
     <script src="/bower_components/angular-aria/angular-aria.js"></script>
     <script src="/bower_components/angular-animate/angular-animate.js"></script>
-    <script src="/bower_components/angular-material/angular-material.js"></script>
-    <!-- Angular Material Library -->
-    <script src="bower_components/angular-material/angular-material.min.js"></script>
+    <script src="/bower_components/angular-material/angular-material.js"></script> -->
     <!-- App -->
-    <script src="app/app.js"></script>
+    <script src="app/js/app.js"></script>
+    <script src="app/js/colors.js"></script>
 
 
   </body>

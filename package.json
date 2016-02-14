@@ -15,7 +15,14 @@
     "url": "https://github.com/paesku/svg-icons/issues"
   },
   "homepage": "https://github.com/paesku/svg-icons#readme",
+  "dependencies": {
+    "angular": "^1.4.9",
+    "angular-animate": "^1.4.9",
+    "angular-aria": "^1.4.9",
+    "angular-material": "^1.0.0"
+  },
   "devDependencies": {
+    "angular-material": "^1.0.5",
     "node-sass": "^3.4.2"
   }
 }

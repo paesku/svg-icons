@@ -28,15 +28,21 @@
         'contrastLightColors': undefined    // could also specify this if default was 'dark'
       }
     })
-    .controller('AppCtrl', function DemoCtrl($mdDialog, colors) {
+    .controller('AppCtrl', function DemoCtrl($mdDialog, colors, $mdColorPalette) {
       this.openMenu = function($mdOpenMenu, ev) {
         $mdOpenMenu(ev);
       };
-
       this.active = true;
-      var  activeColor = 'rgb(' + colors.default['50'].value + ')';
+      // https://jsstyles.github.io/repl/ ;-)
+      var $greydark = $mdColorPalette['blue-grey']['900'].value;
+      var $greymedium = $mdColorPalette['blue-grey']['800'].value;
+      var activeColor = 'rgba(' + $greymedium + ', 0.95)'; //'rgb(' + colors.default['50'].value + ')';
       this.activeItem = {
-         'background-color': activeColor
+        'background-color': activeColor
+      }
+
+      this.sidenavColor = {
+        'background-color': 'rgba(' + $greydark + ', 1)'
       }
     })
     .config(function($mdThemingProvider, colors) {

@@ -61,12 +61,13 @@
       </md-toolbar>
 
       <md-content layout="row" flex>
-        <md-sidenav layout="column"
+        <md-sidenav ng-style="ctrl.sidenavColor"
+                    layout="column"
                     md-is-locked-open="true"
-                    class="md-background md-hue-3 md-sidenav-left md-whiteframe-z1">
-          <md-list>
+                    class="md-sidenav-left md-whiteframe-z1">
+          <md-list  class="md-accent md-hue-1">
             <md-list-item ng-style="ctrl.activeItem">
-              <md-button>
+              <md-button class="md-hue-1">
                 <md-icon md-svg-icon="ui:cake"
                          class="md-accent icon-lg">
                 </md-icon>
@@ -81,22 +82,22 @@
                 Menu 2
               </md-button>
             </md-list-item>
-            <md-list-item>
-              <md-button class="md-primary" ng-class="ctrl.active && 'md-hue-1'">
+            <md-list-item >
+              <md-button class="ng-background" ng-class="ctrl.active && 'md-hue-1'">
                 <md-icon md-svg-src="symbols:icon-category-concept2" class="icon-lg"></md-icon>
                 Menu 3
               </md-button>
             </md-list-item>
 
             <md-list-item >
-              <md-button>
+              <md-button  class="md-hue-1" >
                 <md-icon md-svg-src="device:signal_cellular_4_bar" class="icon-lg"></md-icon>
                 Menu 4
               </md-button>
             </md-list-item>
 
             <md-list-item >
-              <md-button>
+              <md-button class="md-hue-1">
                 <md-icon md-svg-src="symbols:icon-hammer2" class="icon-lg" style="color: blueviolet;"></md-icon>
                 Menu 5
               </md-button>

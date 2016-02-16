@@ -6,9 +6,41 @@
     <link rel="stylesheet" href="app/styles/app.css">
   </head>
   <style>
+  :root {
+    --dark-primary-color:       #0288D1;
+    --default-primary-color:    #03A9F4;
+    --light-primary-color:      #B3E5FC;
+    --text-primary-color:       #FFFFFF;
+    --accent-color:             #9E9E9E;
+    --primary-background-color: #B3E5FC;
+    --primary-text-color:       #212121;
+    --secondary-text-color:     #727272;
+    --disabled-text-color:      #BDBDBD;
+    --divider-color:            #B6B6B6;
+
+
+    /* Components */
+
+    /* paper-drawer-panel */
+    --drawer-menu-color:           #ffffff;
+    --drawer-border-color:         1px solid #ccc;
+    --drawer-toolbar-border-color: 1px solid rgba(0, 0, 0, 0.22);
+
+    /* paper-menu */
+    --paper-menu-background-color: #fff;
+    --menu-link-color:             #111111;
+
+    /* paper-input */
+   --paper-input-container-color:       rgba(255, 255, 255, 0.64);
+   --paper-input-container-focus-color: rgba(255, 255, 255, 1);
+   --paper-input-container-input-color: #fff;
+  }
   .container {
     margin: 1rem 2rem;
     padding: 1rem;
+  }
+  p {
+    color: var(--dark-primary-color);
   }
 
 </style>
@@ -26,24 +58,24 @@
       </symbol>
     </svg>
     <div ng-app="app" ng-controller="AppCtrl as ctrl">
-      <md-toolbar class="md-accent md-whiteframe-z2">
+      <md-toolbar class="md-toolbar-theme md-whiteframe-z3">
         <div class="md-toolbar-tools">
           <h3>Angular Material Icons</h3>
           <span flex></span>
-          <md-button class="md-icon-button md-primary" aria-label="some label">
+          <md-button class="md-toolbar-theme md-icon-button md-accent md-hue-1" aria-label="some label">
             <md-icon md-svg-icon="ui:cake"></md-icon>
           </md-button>
-          <md-button class="md-icon-button" aria-label="some label">
+          <md-button class="md-toolbar-theme  md-icon-button md-accent md-hue-2" aria-label="some label">
             <md-icon md-svg-icon="uiplus:nav" class="icon-lg"></md-icon>
           </md-button>
           <md-menu>
-            <md-button class="md-icon-button" ng-click="ctrl.openMenu($mdOpenMenu, $event)" aria-label="some label">
+            <md-button class="md-toolbar-theme md-icon-button md-accent md-hue-3" ng-click="ctrl.openMenu($mdOpenMenu, $event)" aria-label="some label">
               <md-icon md-menu-origin md-svg-icon="ui:cake"></md-icon>
             </md-button>
             <md-menu-content width="4">
               <md-menu-item>
                 <md-button aria-label="some label">
-                  <md-icon md-svg-icon="ui:cake" style="fill: #fff;" md-menu-align-target></md-icon>
+                  <md-icon md-svg-icon="ui:cake" md-menu-align-target></md-icon>
                   Redial
                 </md-button>
               </md-menu-item>
@@ -60,14 +92,13 @@
         </div>
       </md-toolbar>
 
-      <md-content layout="row" flex>
-        <md-sidenav ng-style="ctrl.sidenavColor"
-                    layout="column"
+      <div layout="row" flex>
+        <md-sidenav layout="column"
                     md-is-locked-open="true"
-                    class="md-sidenav-left md-whiteframe-z1">
-          <md-list  class="md-accent md-hue-1">
-            <md-list-item ng-style="ctrl.activeItem">
-              <md-button class="md-hue-1">
+                    class="md-sidebar-theme md-hue-3 md-sidenav-left md-whiteframe-z1">
+          <md-list>
+            <md-list-item>
+              <md-button class="md-accent1">
                 <md-icon md-svg-icon="ui:cake"
                          class="md-accent icon-lg">
                 </md-icon>
@@ -107,7 +138,43 @@
         </md-sidenav>
 
         <md-content layout="column" class="md-hue-1">
-          <md-content class="md-hue-2 container md-whiteframe-z2">
+          <md-content layout-padding class="container md-toolbar-theme md-whiteframe-z2">
+            <h1>Theme "Toolbar"</h1>
+            <md-button class="md-icon-button md-accent" aria-label="some label">
+              <md-icon md-svg-icon="ui:cake"></md-icon>
+            </md-button>
+            <md-button class="md-tooblar-theme md-icon-button md-accent" aria-label="some label">
+              <md-icon md-svg-icon="ui:cake"></md-icon>
+            </md-button>
+            <p>  There are several ways to use SVG Icons within a Document. A couple
+              of them are shown here, specially the Angular Material component.
+              Have a look at the comments within the files. ;-)</p>
+          </md-content>
+          <md-content layout-padding class="container md-sidebar-theme md-whiteframe-z2">
+            <h1>Theme "Sidebar"</h1>
+            <md-button class="md-icon-button md-accent" aria-label="some label">
+              <md-icon md-svg-icon="ui:cake"></md-icon>
+            </md-button>
+            <md-button class="md-sidebar-theme md-icon-button md-accent" aria-label="some label">
+              <md-icon md-svg-icon="ui:cake"></md-icon>
+            </md-button>
+            <p>  There are several ways to use SVG Icons within a Document. A couple
+              of them are shown here, specially the Angular Material component.
+              Have a look at the comments within the files. ;-)</p>
+          </md-content>
+          <md-content layout-padding class="container md-page-theme md-whiteframe-z2">
+            <h1>Theme "Page"</h1>
+            <md-button class="md-icon-button md-accent" aria-label="some label">
+              <md-icon md-svg-icon="ui:cake"></md-icon>
+            </md-button>
+            <md-button class="md-page-theme md-icon-button md-accent" aria-label="some label">
+              <md-icon md-svg-icon="ui:cake"></md-icon>
+            </md-button>
+            <p>  There are several ways to use SVG Icons within a Document. A couple
+              of them are shown here, specially the Angular Material component.
+              Have a look at the comments within the files. ;-)</p>
+          </md-content>
+          <md-content layout-padding class="container md-whiteframe-z2">
           <h2>Usage of SVG Icons in Angular Material and the classic Way</h2>
           <p class="md-body-1">
             There are several ways to use SVG Icons within a Document. A couple
@@ -135,7 +202,7 @@
           </ul>
           </md-content>
           <md-divider></md-divider>
-          <md-content class="md-hue-2 container md-whiteframe-z2">
+          <md-content class="container md-whiteframe-z2">
             <h3>Examples</h3>
             <div>
               <h2>Classic <code>use</code></h2>
@@ -164,9 +231,13 @@
             </div>
           </md-content>
           <md-divider></md-divider>
-          <md-content class="md-hue-2 container md-whiteframe-z3">
+          <md-content class="container md-whiteframe-z3">
             <h3>Playground</h3>
             <h4>Colors</h4>
+            <p>Read about the concept of coloring in Angular Material</p>
+            <ul>
+              <li><a href="https://stackoverflow.com/questions/29827104/angular-material-design-mdthemingprovider-and-color-palettes-how-to-use-them">Stack overflow</a></li>
+            </ul>
             <p class="md-default-theme md-fg md-hue-3">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum maxime iste, facere aperiam vel neque nam ab aliquid repellendus adipisci natus odit soluta odio, nulla nostrum quo sit iure repudiandae!
             </p>
@@ -207,13 +278,13 @@
             </md-button>
           </md-content>
 
-          <md-whiteframe class="md-hue-2 md-whiteframe-3dp" flex-sm="45" flex-gt-sm="35" flex-gt-md="25" layout layout-align="center center">
+          <md-whiteframe class="container md-whiteframe-3dp" flex-sm="45" flex-gt-sm="35" flex-gt-md="25" layout layout-align="center center">
             <span>.md-whiteframe-3dp</span>
           </md-whiteframe>
 
         </md-content>
 
-      </md-content>
+      </div>
     </div>
 
     <!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>

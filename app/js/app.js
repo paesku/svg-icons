@@ -6,6 +6,8 @@
       'md-colors'
     ])
     .constant('colors', {
+      // https://www.materialpalette.com/
+      // https://github.com/angular/material/blob/v1.0.5/src/core/services/theming/theming.js
       'default': {
         '50': 'ffebee',
         '100': 'ffcdd2',
@@ -46,7 +48,7 @@
       }
     })
     .config(function($mdThemingProvider, colors) {
-      <!-- https://material.angularjs.org/latest/Theming/03_configuring_a_theme -->
+      // https://material.angularjs.org/latest/Theming/03_configuring_a_theme
       var customBlueMap = 		$mdThemingProvider.extendPalette('light-blue', {
         'contrastDefaultColor': 'light',
         'contrastDarkColors': ['50', '100'],
@@ -60,16 +62,23 @@
       // Manipulate smaller pieces of a palette
       // $mdThemingProvider.definePalette('customBlue', customBlueMap);
       // $mdThemingProvider.definePalette('customGrey', customGreyMap);
-      $mdThemingProvider.theme('default')
-        .primaryPalette('blue-grey')
-        .accentPalette('custom-palette')
-        .warnPalette('orange')
-        .backgroundPalette('grey', {
-          'hue-1': '200',
-          'hue-2': '50'
-        });
-      // $mdThemingProvider.theme('input', 'default')
-      //   .primaryPalette('grey');
+      // $mdThemingProvider.theme('default')
+      //   .primaryPalette('grey')
+      //   .accentPalette('light-blue')
+      //   .warnPalette('deep-orange')
+      //   .backgroundPalette('grey', {
+      //     'hue-1': '200',
+      //     'hue-2': '50'
+      //   });
+      $mdThemingProvider.theme('toolbar')
+        .accentPalette('lime')
+        .primaryPalette('red');
+      $mdThemingProvider.theme('sidebar')
+        .accentPalette('yellow')
+        .backgroundPalette('brown');
+      $mdThemingProvider.theme('page')
+        .accentPalette('light-blue')
+        .backgroundPalette('pink');
     })
     .config(function($mdIconProvider) {
       $mdIconProvider

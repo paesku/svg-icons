@@ -5,8 +5,9 @@ body {
   height: 100vh; }
 
 /* Why does this class have no effect here ? */
-.container {
-  background-color: red; }
+/*.container {
+  background-color: red;
+}*/
 
 .md-sidenav-left {
   min-height: calc(100vH - 75px); }

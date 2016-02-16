@@ -6,6 +6,8 @@
       'md-colors'
     ])
     .constant('colors', {
+      // READ THIS FIRST:
+      // https://material.angularjs.org/latest/Theming/01_introduction
       // https://www.materialpalette.com/
       // https://github.com/angular/material/blob/v1.0.5/src/core/services/theming/theming.js
       'default': {
@@ -57,11 +59,17 @@
       var customGreyMap = 		$mdThemingProvider.extendPalette('blue-grey', {
         '50': 'fafafa'
       });
+
+      var customPinkMap = 		$mdThemingProvider.extendPalette('pink', {
+        'contrastDefaultColor': 'light',
+        'contrastLightColors': '50',
+        'contrastDarkColors': '50 '
+      });
       // If defining a complete palette all values must be set
-      $mdThemingProvider.definePalette('custom-palette', colors.default);
+      $mdThemingProvider.definePalette('foo-red', colors.default);
       // Manipulate smaller pieces of a palette
       // $mdThemingProvider.definePalette('customBlue', customBlueMap);
-      // $mdThemingProvider.definePalette('customGrey', customGreyMap);
+      $mdThemingProvider.definePalette('customPink', customPinkMap);
       // $mdThemingProvider.theme('default')
       //   .primaryPalette('grey')
       //   .accentPalette('light-blue')
@@ -72,13 +80,14 @@
       //   });
       $mdThemingProvider.theme('toolbar')
         .accentPalette('lime')
-        .primaryPalette('red');
+        .primaryPalette('foo-red');
       $mdThemingProvider.theme('sidebar')
         .accentPalette('yellow')
         .backgroundPalette('brown');
       $mdThemingProvider.theme('page')
         .accentPalette('light-blue')
-        .backgroundPalette('pink');
+        .accentPalette('purple')
+        .backgroundPalette('customPink');
     })
     .config(function($mdIconProvider) {
       $mdIconProvider
